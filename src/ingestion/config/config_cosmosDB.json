@@ -1,0 +1,22 @@
+{
+    "source": {
+        "name":"cosmosDB",
+        "connection_string":"<store in dbutils.secrets: cosmosdb_connection_string>",
+        "database_name":"retail",
+        "connection_name" : "sales_orders"
+    },
+
+
+    "target": {
+        "base_path": "/Volumes/retaildataplatform/bronze/raw_data/",
+        "folder":   "cosmosdb_sales_orders",
+        "file_format": "json",
+        "mode": "overwrite"  
+        },
+    
+    "write_options":{
+        "header": "true",
+        "quoteAll": "true",
+        "escape": "\""
+    }
+}
